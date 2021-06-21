@@ -14,9 +14,17 @@ public class TennisCoach implements Coach {
 		return "Practice your backhand volley";
 	}
 	
+//	@Autowired
+//	public TennisCoach(FortuneService theFortuneService) {
+//		fortuneService = theFortuneService;
+//	}
 	@Autowired
-	public TennisCoach(FortuneService theFortuneService) {
-		fortuneService = theFortuneService;
+	public void setFortuneService(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
+	
+	public TennisCoach() {
+		System.out.println("TennisCoach: default constructor");
 	}
 
 	@Override
